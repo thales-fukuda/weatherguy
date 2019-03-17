@@ -34,6 +34,11 @@ export const dataUpdated = data => ({
 /**
  * Complex actions.
  */
+
+export const updateCity = (city) => {
+  store.dispatch(cityUpdated(city));
+};
+
 export const updateWeather = (city) => {
   const data = Api.currentWeather(city);
   store.dispatch(dataUpdated(data));
