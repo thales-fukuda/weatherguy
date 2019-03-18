@@ -18,6 +18,7 @@ const SearchBar = (props) => {
     if (e.key === 'Enter') {
       try {
         const data = await Api.currentWeather(city);
+        console.log(data);
         updateWeather(data.data);
       } catch (error) {
         console.log('Algo deu errado', error);
