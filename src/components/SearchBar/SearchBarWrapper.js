@@ -4,7 +4,6 @@ import SearchBar from './SearchBar';
 
 const mapStateToProps = state => ({
   city: state.weather.city,
-  weatherData: state.weather.weatherData,
 });
 
 const mapDispatchToProps = dispatch => ({

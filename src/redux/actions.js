@@ -1,6 +1,3 @@
-import store from './store';
-import Api from '../Api';
-
 import { CITY_UPDATED, DATA_UPDATED } from './actionTypes';
 
 
@@ -12,7 +9,7 @@ import { CITY_UPDATED, DATA_UPDATED } from './actionTypes';
  * Update active city.
  * @param city
  */
-export const cityUpdated = city => ({
+export const updateCity = city => ({
   type: CITY_UPDATED,
   payload: {
     city,
@@ -23,23 +20,9 @@ export const cityUpdated = city => ({
  * Update current city data.
  * @param data
  */
-export const dataUpdated = data => ({
+export const updateWeather = data => ({
   type: DATA_UPDATED,
   payload: {
     data,
   },
 });
-
-
-/**
- * Complex actions.
- */
-
-export const updateCity = (city) => {
-  store.dispatch(cityUpdated(city));
-};
-
-export const updateWeather = (city) => {
-  const data = Api.currentWeather(city);
-  store.dispatch(dataUpdated(data));
-};

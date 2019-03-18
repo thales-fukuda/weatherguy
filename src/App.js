@@ -1,17 +1,14 @@
 import React from 'react';
-import Api from './Api';
+
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 import SearchBar from './components/SearchBar';
 
-const call = async () => {
-  const response = await Api.currentWeather('curitiba');
-  console.log(response);
-};
-
-call();
-
 const App = () => (
-  <SearchBar />
+  <Provider store={store}>
+    <SearchBar />
+  </Provider>
 );
 
 export default App;
