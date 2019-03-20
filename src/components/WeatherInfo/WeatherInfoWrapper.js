@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Info from './Info';
+import WeatherInfo from './WeatherInfo';
 
 const mapStateToProps = state => ({
   city: state.weather.city,
@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-)(Info);
+)(WeatherInfo);

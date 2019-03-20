@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Api from '../../Api';
 
 import Input from '../elements/Input';
@@ -32,6 +34,12 @@ const SearchBar = (props) => {
       onKeyPress={e => handleKeyPress(e)}
     />
   );
+};
+
+SearchBar.propTypes = {
+  city: PropTypes.string.isRequired,
+  updateCity: PropTypes.func.isRequired,
+  updateWeather: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
