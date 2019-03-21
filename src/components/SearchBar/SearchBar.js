@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Api from '../../Api';
 
 import Input from '../elements/Input';
+import Loading from '../elements/Loading';
 
 const SearchBar = (props) => {
   const {
@@ -11,6 +12,7 @@ const SearchBar = (props) => {
     updateCity,
     updateWeather,
   } = props;
+  const [isLoadingActive, useIsLoadingActive] = useState(false);
 
   const handleChange = (e) => {
     updateCity(e.target.value);
@@ -19,7 +21,9 @@ const SearchBar = (props) => {
   const handleKeyPress = async (e) => {
     if (e.key === 'Enter') {
       try {
+        useIsLoadingActive(true);
         const data = await Api.currentWeather(city);
+        useIsLoadingActive(false);
         console.log(data);
         updateWeather(data.data);
       } catch (error) {
@@ -29,10 +33,22 @@ const SearchBar = (props) => {
   };
 
   return (
-    <Input
-      onChange={e => handleChange(e)}
-      onKeyPress={e => handleKeyPress(e)}
-    />
+    <>
+      <Input
+        onChange={e => handleChange(e)}
+        onKeyPress={e => handleKeyPress(e)}
+      />
+      {
+        isLoadingActive
+        && (
+          <Loading>
+            <div />
+            <div />
+            <div />
+          </Loading>
+        )
+      }
+    </>
   );
 };
 
