@@ -22,6 +22,7 @@ const WeatherInfo = (props) => {
           </InfoBox>
 
           <InfoBox>
+            <InfoBox.Icon className='wi wi-day-lightning' />
             <InfoBox.Title>Temperature</InfoBox.Title>
             <InfoBox.Text>{ weather.temp }</InfoBox.Text>
           </InfoBox>
@@ -29,6 +30,14 @@ const WeatherInfo = (props) => {
           <InfoBox>
             <InfoBox.Title>Max</InfoBox.Title>
             <InfoBox.Text>{ weather.temp_max }</InfoBox.Text>
+          </InfoBox>
+
+          <InfoBox>
+            <InfoBox.Text>{ `${weatherData.wind.speed}km/h` }</InfoBox.Text>
+          </InfoBox>
+
+          <InfoBox>
+            <InfoBox.Text>{ `${weather.humidity}%` }</InfoBox.Text>
           </InfoBox>
         </>
         )
