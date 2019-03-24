@@ -6,10 +6,13 @@ import store from './redux/store';
 import SearchBar from './components/SearchBar';
 import WeatherInfo from './components/WeatherInfo';
 
+import GlobalStyle from './GlobalStyle';
+
 const App = () => (
   <Provider store={store}>
     <SearchBar />
     <WeatherInfo />
+    <GlobalStyle />
   </Provider>
 );
 

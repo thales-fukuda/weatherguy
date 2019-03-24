@@ -37,6 +37,7 @@ const SearchBar = (props) => {
       <Input
         onChange={e => handleChange(e)}
         onKeyPress={e => handleKeyPress(e)}
+        placeholder='search for a city...'
       />
       {
         isLoadingActive
