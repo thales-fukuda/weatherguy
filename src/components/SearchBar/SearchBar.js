@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Api from '../../Api';
 
-import Input from '../elements/Input';
+import Geosuggest from '../elements/Geosuggest';
 import Loading from '../elements/Loading';
 
 const SearchBar = (props) => {
@@ -12,32 +12,47 @@ const SearchBar = (props) => {
     updateCity,
     updateWeather,
   } = props;
+
   const [isLoadingActive, useIsLoadingActive] = useState(false);
 
-  const handleChange = (e) => {
-    updateCity(e.target.value);
+  const handleChange = (value) => {
+    updateCity(value);
   };
 
-  const handleKeyPress = async (e) => {
+  const handleUpdateWeather = async (value) => {
+    try {
+      useIsLoadingActive(true);
+      const data = await Api.currentWeather(value);
+      useIsLoadingActive(false);
+      console.log(data);
+      updateWeather(data.data);
+    } catch (error) {
+      console.log('Algo deu errado', error);
+    }
+  };
+
+  const handleSuggestSelect = (value) => {
+    if (value) {
+      handleChange(value.description);
+      handleUpdateWeather(value.description);
+    }
+  };
+
+  const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      try {
-        useIsLoadingActive(true);
-        const data = await Api.currentWeather(city);
-        useIsLoadingActive(false);
-        console.log(data);
-        updateWeather(data.data);
-      } catch (error) {
-        console.log('Algo deu errado', error);
-      }
+      handleUpdateWeather(city);
     }
   };
 
   return (
     <>
-      <Input
+      <Geosuggest
+        types={['(cities)']}
         onChange={e => handleChange(e)}
-        onKeyPress={e => handleKeyPress(e)}
+        onSuggestSelect={value => handleSuggestSelect(value)}
+        onKeyDown={e => handleKeyPress(e)}
         placeholder='search for a city...'
+        value={city}
       />
       {
         isLoadingActive
