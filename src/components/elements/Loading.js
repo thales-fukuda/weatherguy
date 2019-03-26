@@ -8,13 +8,15 @@ const animation = keyframes`
 `;
 
 const Loading = styled.section`
+  position: absolute;
+  bottom: 25%;
   display: flex;
   justify-content: center;
   div {
     width: 1rem;
     height: 1rem;
     margin: 3rem 0.2rem;
-    background: #8385aa;
+    background: #eaeaea;
     border-radius: 50%;
     animation: ${animation} 0.6s infinite alternate;
   }
