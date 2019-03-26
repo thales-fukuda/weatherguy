@@ -5,14 +5,16 @@ import Api from '../../Api';
 
 import Geosuggest from '../elements/Geosuggest';
 import Loading from '../elements/Loading';
+import Title from '../elements/Title';
 
 const SearchBar = (props) => {
   const {
     city,
+    weatherStatus,
     updateCity,
     updateWeather,
+    updateWeatherStatus,
   } = props;
-
   const [isLoadingActive, useIsLoadingActive] = useState(false);
 
   const handleChange = (value) => {
@@ -24,6 +26,7 @@ const SearchBar = (props) => {
       useIsLoadingActive(true);
       const data = await Api.currentWeather(value);
       useIsLoadingActive(false);
+      updateWeatherStatus(true);
       console.log(data);
       updateWeather(data.data);
     } catch (error) {
@@ -46,6 +49,7 @@ const SearchBar = (props) => {
 
   return (
     <>
+      <Title isWeatherDisplayed={weatherStatus}>Weatherguy</Title>
       <Geosuggest
         types={['(cities)']}
         onChange={e => handleChange(e)}
@@ -53,6 +57,7 @@ const SearchBar = (props) => {
         onKeyDown={e => handleKeyPress(e)}
         placeholder='search for a city...'
         value={city}
+        isWeatherDisplayed={weatherStatus}
       />
       {
         isLoadingActive
@@ -70,8 +75,10 @@ const SearchBar = (props) => {
 
 SearchBar.propTypes = {
   city: PropTypes.string.isRequired,
+  weatherStatus: PropTypes.bool.isRequired,
   updateCity: PropTypes.func.isRequired,
   updateWeather: PropTypes.func.isRequired,
+  updateWeatherStatus: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

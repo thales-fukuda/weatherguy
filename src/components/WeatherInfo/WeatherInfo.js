@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import InfoBox from '../blocks/InfoBox';
+import InfoContainer from './InfoContainer';
 import InfoWrapper from './InfoWrapper';
 
 const WeatherInfo = (props) => {
   const {
     weatherData,
+    weatherStatus,
   } = props;
 
   const weather = weatherData.main;
@@ -15,14 +17,14 @@ const WeatherInfo = (props) => {
   const toFahrenheit = value => Math.floor(toCelsius(value) * 9 / 5 + 32);
 
   return (
-    <>
+    <InfoContainer isWeatherDisplayed={weatherStatus}>
       {
         weatherData.main
         && (
         <>
           <InfoWrapper>
             <InfoBox>
-              <InfoBox.Text fontSize='62px'>{weatherData.name}</InfoBox.Text>
+              <InfoBox.Text fontSize='42px'>{weatherData.name}</InfoBox.Text>
             </InfoBox>
           </InfoWrapper>
           <InfoWrapper>
@@ -33,8 +35,8 @@ const WeatherInfo = (props) => {
             </InfoBox>
 
             <InfoBox>
-              <InfoBox.Text fontSize='62px'>{ `${toCelsius(weather.temp)} °C` }</InfoBox.Text>
-              <InfoBox.Text fontSize='62px'>{ `${toFahrenheit(weather.temp)} °F` }</InfoBox.Text>
+              <InfoBox.Text fontSize='56px'>{ `${toCelsius(weather.temp)} °C` }</InfoBox.Text>
+              <InfoBox.Text fontSize='56px'>{ `${toFahrenheit(weather.temp)} °F` }</InfoBox.Text>
             </InfoBox>
 
             <InfoBox opacity='.5'>
@@ -58,12 +60,13 @@ const WeatherInfo = (props) => {
         </>
         )
       }
-    </>
+    </InfoContainer>
   );
 };
 
 WeatherInfo.propTypes = {
   weatherData: PropTypes.instanceOf(Object).isRequired,
+  weatherStatus: PropTypes.bool.isRequired,
 };
 
 export default WeatherInfo;

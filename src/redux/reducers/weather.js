@@ -1,8 +1,9 @@
-import { CITY_UPDATED, DATA_UPDATED } from '../actionTypes';
+import { CITY_UPDATED, DATA_UPDATED, WEATHER_STATUS_UPDATED } from '../actionTypes';
 
 const initialState = {
   city: '',
   weatherData: {},
+  weatherStatus: false,
 };
 
 export default (state = initialState, action) => {
@@ -17,6 +18,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         weatherData: action.payload.data,
+      };
+
+    case WEATHER_STATUS_UPDATED:
+      return {
+        ...state,
+        weatherStatus: action.payload.status,
       };
 
     default:

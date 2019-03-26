@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Text = styled.p`
+  text-align: center;
   margin-bottom: 5px;
   color: #ededed;
   font-weight: 300;
