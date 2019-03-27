@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/weatherguy/static/js/runtime~main.dc98c4e3.js"
   },
   {
-    "revision": "52c99e10add974c3accb",
-    "url": "/weatherguy/static/js/main.52c99e10.chunk.js"
+    "revision": "910712f87fd647b42009",
+    "url": "/weatherguy/static/js/main.910712f8.chunk.js"
   },
   {
     "revision": "99f6a9a9518bd7b5951c",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/weatherguy/static/css/1.42b08c39.chunk.css"
   },
   {
-    "revision": "c146812d7506ea55c4c86762c86083dc",
+    "revision": "f7e848de0cdd14f156e6d508c2b3e64d",
     "url": "/weatherguy/index.html"
   }
 ];
