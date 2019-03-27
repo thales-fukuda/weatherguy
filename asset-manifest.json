@@ -1,0 +1,14 @@
+{
+  "main.js": "/weatherguy/static/js/main.52c99e10.chunk.js",
+  "main.js.map": "/weatherguy/static/js/main.52c99e10.chunk.js.map",
+  "static/css/1.42b08c39.chunk.css": "/weatherguy/static/css/1.42b08c39.chunk.css",
+  "static/js/1.99f6a9a9.chunk.js": "/weatherguy/static/js/1.99f6a9a9.chunk.js",
+  "static/js/1.99f6a9a9.chunk.js.map": "/weatherguy/static/js/1.99f6a9a9.chunk.js.map",
+  "runtime~main.js": "/weatherguy/static/js/runtime~main.dc98c4e3.js",
+  "runtime~main.js.map": "/weatherguy/static/js/runtime~main.dc98c4e3.js.map",
+  "static/media/weather-icons.css": "/weatherguy/static/media/weathericons-regular-webfont.e7ef2b44.eot",
+  "static/css/1.42b08c39.chunk.css.map": "/weatherguy/static/css/1.42b08c39.chunk.css.map",
+  "index.html": "/weatherguy/index.html",
+  "precache-manifest.7ae718030fb64efebe992b240b98ce01.js": "/weatherguy/precache-manifest.7ae718030fb64efebe992b240b98ce01.js",
+  "service-worker.js": "/weatherguy/service-worker.js"
+}
