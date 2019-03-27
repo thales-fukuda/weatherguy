@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Geosuggest from 'react-geosuggest';
+import PropTypes from 'prop-types';
 
 export default styled(Geosuggest)`
   position: absolute;
@@ -63,4 +64,6 @@ export default styled(Geosuggest)`
     }
   }
 
-`;
+`.propTypes = {
+    isWeatherDisplayed: PropTypes.bool.isRequired,
+  };

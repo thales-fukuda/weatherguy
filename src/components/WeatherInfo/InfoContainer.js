@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const InfoContainer = styled.section`
   width: 100%;
@@ -17,5 +18,9 @@ const InfoContainer = styled.section`
     padding-top: 5%;
   }
 `;
+
+InfoContainer.propTypes = {
+  isWeatherDisplayed: PropTypes.bool.isRequired,
+};
 
 export default InfoContainer;

@@ -15,6 +15,7 @@ const SearchBar = (props) => {
     updateWeather,
     updateWeatherStatus,
   } = props;
+
   const [isLoadingActive, useIsLoadingActive] = useState(false);
 
   const handleChange = (value) => {
