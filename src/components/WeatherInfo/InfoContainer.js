@@ -12,6 +12,10 @@ const InfoContainer = styled.section`
   transition: 1s ease opacity;
   transition-delay: .5s;
   z-index: 1;
+
+  @media (min-width: 720px) {
+    padding-top: 5%;
+  }
 `;
 
 export default InfoContainer;

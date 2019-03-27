@@ -9,6 +9,7 @@ import Title from '../../elements/Title';
 const InfoBox = styled.section`
   height: 80px;
   display: flex;
+  margin-bottom: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

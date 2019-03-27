@@ -28,22 +28,25 @@ const WeatherInfo = (props) => {
             </InfoBox>
           </InfoWrapper>
           <InfoWrapper>
-            <InfoBox opacity='.5'>
-              <InfoBox.Text fontSize='16px'>min</InfoBox.Text>
-              <InfoBox.Text>{ `${toCelsius(weather.temp_min)} °C` }</InfoBox.Text>
-              <InfoBox.Text>{ `${toFahrenheit(weather.temp_min)} °F` }</InfoBox.Text>
-            </InfoBox>
 
             <InfoBox>
               <InfoBox.Text fontSize='56px'>{ `${toCelsius(weather.temp)} °C` }</InfoBox.Text>
               <InfoBox.Text fontSize='56px'>{ `${toFahrenheit(weather.temp)} °F` }</InfoBox.Text>
             </InfoBox>
 
-            <InfoBox opacity='.5'>
-              <InfoBox.Text fontSize='16px'>max</InfoBox.Text>
-              <InfoBox.Text>{ `${toCelsius(weather.temp_max)} °C` }</InfoBox.Text>
-              <InfoBox.Text>{ `${toFahrenheit(weather.temp_max)} °F` }</InfoBox.Text>
-            </InfoBox>
+            <div>
+              <InfoBox opacity='.5'>
+                <InfoBox.Text fontSize='16px'>min</InfoBox.Text>
+                <InfoBox.Text>{ `${toCelsius(weather.temp_min)} °C` }</InfoBox.Text>
+                <InfoBox.Text>{ `${toFahrenheit(weather.temp_min)} °F` }</InfoBox.Text>
+              </InfoBox>
+              <InfoBox opacity='.5'>
+                <InfoBox.Text fontSize='16px'>max</InfoBox.Text>
+                <InfoBox.Text>{ `${toCelsius(weather.temp_max)} °C` }</InfoBox.Text>
+                <InfoBox.Text>{ `${toFahrenheit(weather.temp_max)} °F` }</InfoBox.Text>
+              </InfoBox>
+            </div>
+
           </InfoWrapper>
 
           <InfoWrapper>
