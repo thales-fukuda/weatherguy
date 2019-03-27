@@ -28,7 +28,6 @@ const SearchBar = (props) => {
       const data = await Api.currentWeather(value);
       useIsLoadingActive(false);
       updateWeatherStatus(true);
-      console.log(data);
       updateWeather(data.data);
     } catch (error) {
       console.log('Algo deu errado', error);
