@@ -30,7 +30,7 @@ const SearchBar = (props) => {
       updateWeatherStatus(true);
       updateWeather(data.data);
     } catch (error) {
-      console.log('Algo deu errado', error);
+      console.error(error);
     }
   };
 
