@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar/> render() renders the component 1`] = `
+<Fragment>
+  <styled.h1
+    isWeatherDisplayed={true}
+  >
+    Weatherguy
+  </styled.h1>
+  <Styled(default_1$$1)
+    isWeatherDisplayed={true}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    onSuggestSelect={[Function]}
+    placeholder="search for a city..."
+    types={
+      Array [
+        "(cities)",
+      ]
+    }
+    value=""
+  />
+</Fragment>
+`;
