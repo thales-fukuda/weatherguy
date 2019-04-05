@@ -2,20 +2,20 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const InfoContainer = styled.section`
-  width: 100%;
-  height: 85%;
-  padding-top: 15%;
+  width: 230px;
+  margin-top: 15%;
+  padding: 15px;
+  border: 1px solid rgba(237, 237, 237, .6);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   opacity: ${props => (props.isWeatherDisplayed ? '1' : '0')};
   transition: 1s ease opacity;
   transition-delay: .5s;
   z-index: 1;
 
   @media (min-width: 720px) {
-    padding-top: 5%;
+    margin-top: 5%;
   }
 `;
 

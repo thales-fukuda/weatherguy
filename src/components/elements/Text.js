@@ -14,7 +14,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  fontSize: '22px',
+  fontSize: '18px',
 };
 
 export default Text;

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import InfoBox from '../blocks/InfoBox';
+import InfoField from '../blocks/InfoField';
 import InfoContainer from './InfoContainer';
-import InfoWrapper from './InfoWrapper';
 
 const WeatherInfo = (props) => {
   const {
@@ -22,44 +21,50 @@ const WeatherInfo = (props) => {
         weatherData.main
         && (
         <>
-          <InfoWrapper>
-            <InfoBox>
-              <InfoBox.Text fontSize='42px'>{weatherData.name}</InfoBox.Text>
-            </InfoBox>
-          </InfoWrapper>
-          <InfoWrapper>
+          <InfoField>
+            <InfoField.Text>
+              Temperature:
+              <span>
+                { `\u00A0\u00A0${toCelsius(weather.temp)} °C\u00A0\u00A0/\u00A0\u00A0${toFahrenheit(weather.temp)} °F` }
+              </span>
+            </InfoField.Text>
+          </InfoField>
 
-            <InfoBox>
-              <InfoBox.Text fontSize='56px'>{ `${toCelsius(weather.temp)} °C` }</InfoBox.Text>
-              <InfoBox.Text fontSize='56px'>{ `${toFahrenheit(weather.temp)} °F` }</InfoBox.Text>
-            </InfoBox>
+          <InfoField>
+            <InfoField.Text>
+              Min:
+              <span>
+                {`\u00A0\u00A0${toCelsius(weather.temp_min)} °C\u00A0\u00A0/\u00A0\u00A0${toFahrenheit(weather.temp_min)} °F`}
+              </span>
+            </InfoField.Text>
+          </InfoField>
 
-            <div>
-              <InfoBox opacity='.5'>
-                <InfoBox.Text fontSize='16px'>min</InfoBox.Text>
-                <InfoBox.Text>{ `${toCelsius(weather.temp_min)} °C` }</InfoBox.Text>
-                <InfoBox.Text>{ `${toFahrenheit(weather.temp_min)} °F` }</InfoBox.Text>
-              </InfoBox>
-              <InfoBox opacity='.5'>
-                <InfoBox.Text fontSize='16px'>max</InfoBox.Text>
-                <InfoBox.Text>{ `${toCelsius(weather.temp_max)} °C` }</InfoBox.Text>
-                <InfoBox.Text>{ `${toFahrenheit(weather.temp_max)} °F` }</InfoBox.Text>
-              </InfoBox>
-            </div>
+          <InfoField>
+            <InfoField.Text>
+              Max:
+              <span>
+                {`\u00A0\u00A0${toCelsius(weather.temp_max)} °C\u00A0\u00A0/\u00A0\u00A0${toFahrenheit(weather.temp_max)} °F`}
+              </span>
+            </InfoField.Text>
+          </InfoField>
 
-          </InfoWrapper>
+          <InfoField>
+            <InfoField.Text>
+              Humidy:
+              <span>
+                {`\u00A0\u00A0${weatherData.wind.speed} m/s`}
+              </span>
+            </InfoField.Text>
+          </InfoField>
 
-          <InfoWrapper>
-            <InfoBox>
-              <InfoBox.Icon className='wi wi-strong-wind' />
-              <InfoBox.Text>{ `${weatherData.wind.speed} m/s` }</InfoBox.Text>
-            </InfoBox>
-
-            <InfoBox>
-              <InfoBox.Icon className='wi wi-rain-wind' />
-              <InfoBox.Text>{ `${weather.humidity} %` }</InfoBox.Text>
-            </InfoBox>
-          </InfoWrapper>
+          <InfoField>
+            <InfoField.Text>
+              Wind:
+              <span>
+                {`\u00A0\u00A0${weather.humidity} %`}
+              </span>
+            </InfoField.Text>
+          </InfoField>
         </>
         )
       }

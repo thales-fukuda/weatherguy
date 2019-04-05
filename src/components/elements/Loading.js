@@ -8,8 +8,6 @@ const animation = keyframes`
 `;
 
 const Loading = styled.section`
-  position: absolute;
-  bottom: 25%;
   display: flex;
   justify-content: center;
   div {

@@ -7,6 +7,8 @@ import Geosuggest from '../elements/Geosuggest';
 import Loading from '../elements/Loading';
 import Title from '../elements/Title';
 
+import SearchContainer from './SearchContainer';
+
 const SearchBar = (props) => {
   const {
     city,
@@ -48,8 +50,8 @@ const SearchBar = (props) => {
   };
 
   return (
-    <>
-      <Title isWeatherDisplayed={weatherStatus}>Weatherguy</Title>
+    <SearchContainer isWeatherDisplayed={weatherStatus}>
+      <Title>Weatherguy</Title>
       <Geosuggest
         types={['(cities)']}
         onChange={e => handleChange(e)}
@@ -57,7 +59,6 @@ const SearchBar = (props) => {
         onKeyDown={e => handleKeyPress(e)}
         placeholder='search for a city...'
         value={city}
-        isWeatherDisplayed={weatherStatus}
       />
       {
         isLoadingActive
@@ -69,7 +70,7 @@ const SearchBar = (props) => {
           </Loading>
         )
       }
-    </>
+    </SearchContainer>
   );
 };
 
