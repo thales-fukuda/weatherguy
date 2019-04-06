@@ -50,7 +50,7 @@ const WeatherInfo = (props) => {
 
           <InfoField>
             <InfoField.Text>
-              Humidy:
+              Wind:
               <span>
                 {`\u00A0\u00A0${weatherData.wind.speed} m/s`}
               </span>
@@ -59,7 +59,7 @@ const WeatherInfo = (props) => {
 
           <InfoField>
             <InfoField.Text>
-              Wind:
+              Humidity:
               <span>
                 {`\u00A0\u00A0${weather.humidity} %`}
               </span>
