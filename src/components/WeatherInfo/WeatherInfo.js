@@ -31,7 +31,7 @@ const WeatherInfo = (props) => {
           </InfoField>
 
           <InfoField>
-            <InfoField.Text>
+            <InfoField.Text color='rgba(130, 178, 242, .5)'>
               Min:
               <span>
                 {`\u00A0\u00A0${toCelsius(weather.temp_min)} °C\u00A0\u00A0/\u00A0\u00A0${toFahrenheit(weather.temp_min)} °F`}
@@ -40,7 +40,7 @@ const WeatherInfo = (props) => {
           </InfoField>
 
           <InfoField>
-            <InfoField.Text>
+            <InfoField.Text color='rgba(235, 86, 86, .5)'>
               Max:
               <span>
                 {`\u00A0\u00A0${toCelsius(weather.temp_max)} °C\u00A0\u00A0/\u00A0\u00A0${toFahrenheit(weather.temp_max)} °F`}

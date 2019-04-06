@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Text = styled.p`
   text-align: center;
   margin-bottom: 5px;
-  color: #ededed;
+  color: ${props => props.color};
   font-weight: 300;
   font-size: ${props => props.fontSize};
 `;
@@ -14,6 +14,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
+  color: '#ededed',
   fontSize: '18px',
 };
 

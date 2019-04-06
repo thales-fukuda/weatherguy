@@ -4,6 +4,7 @@ import Text from '../../elements/Text';
 const InfoField = styled.section`
   span {
     opacity: .5;
+    color: #ededed;
   }
 `;
 
