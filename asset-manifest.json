@@ -1,14 +1,11 @@
 {
-  "main.js": "/weatherguy/static/js/main.119751f6.chunk.js",
-  "main.js.map": "/weatherguy/static/js/main.119751f6.chunk.js.map",
-  "static/css/1.42b08c39.chunk.css": "/weatherguy/static/css/1.42b08c39.chunk.css",
-  "static/js/1.95fb8adc.chunk.js": "/weatherguy/static/js/1.95fb8adc.chunk.js",
-  "static/js/1.95fb8adc.chunk.js.map": "/weatherguy/static/js/1.95fb8adc.chunk.js.map",
+  "main.js": "/weatherguy/static/js/main.509e922d.chunk.js",
+  "main.js.map": "/weatherguy/static/js/main.509e922d.chunk.js.map",
+  "static/js/1.ce803d3f.chunk.js": "/weatherguy/static/js/1.ce803d3f.chunk.js",
+  "static/js/1.ce803d3f.chunk.js.map": "/weatherguy/static/js/1.ce803d3f.chunk.js.map",
   "runtime~main.js": "/weatherguy/static/js/runtime~main.dc98c4e3.js",
   "runtime~main.js.map": "/weatherguy/static/js/runtime~main.dc98c4e3.js.map",
-  "static/media/weather-icons.css": "/weatherguy/static/media/weathericons-regular-webfont.f5b0d0d9.woff",
-  "static/css/1.42b08c39.chunk.css.map": "/weatherguy/static/css/1.42b08c39.chunk.css.map",
   "index.html": "/weatherguy/index.html",
-  "precache-manifest.52495cf58e79bbc2c41b29e96cb6b11b.js": "/weatherguy/precache-manifest.52495cf58e79bbc2c41b29e96cb6b11b.js",
+  "precache-manifest.ea8c386eea343f095f237f3c937f9840.js": "/weatherguy/precache-manifest.ea8c386eea343f095f237f3c937f9840.js",
   "service-worker.js": "/weatherguy/service-worker.js"
 }
