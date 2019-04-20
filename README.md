@@ -2,6 +2,8 @@
 
 [weatherguy](https://thales-fukuda.github.io/weatherguy) is a simple weather app made with React. The focus of this project is for practicing and to show my front-end code and skills.
 
+Powered by [OpenWeatherMap](https://openweathermap.org/api)
+
 ## How to run locally
 
 Clone or download the repository in your machine and run this commands at the project folder:
